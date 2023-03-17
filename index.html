@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn On Light</title>
+
+
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
+        .btn-container > button{
+
+            outline: none;
+            padding: 10px;
+            background-color: rgb(8, 12, 237);
+            border: none;
+            margin: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+        }
+        button:hover{
+    
+            background-color: rgb(17, 17, 33);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <img src="turnOnLight/pic_off.gif" alt="Bulb image" id="image">
+
+<div class="btn-container">
+    <button id="lightOn" onclick="lightOn()">Turn On</button>
+    <button id="lightOff" onclick="lightOff()">Turn Off</button>
+</div>
+
+</div>
+    
+
+<script>
+var image=document.getElementById("image");
+function lightOn(){
+    image.src='turnOnLight/pic_on.gif';
+}
+function lightOff(){
+    image.src='turnOnLight/pic_off.gif';
+}
+
+
+</script>
+</body>
+</html>
